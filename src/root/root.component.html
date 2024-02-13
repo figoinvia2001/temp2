@@ -1,0 +1,13 @@
+
+<p>
+  {{ title }}
+</p>
+
+<ul>
+  <li *ngFor = "let city of cities">
+    <button (click)="seleziona(city)">{{ city }}</button>
+  </li>
+  <app-notifica [selezione]="selezione"> </app-notifica>
+</ul>
+
+<app-newcity (newCityEvent)="addCity($event)"> </app-newcity>
